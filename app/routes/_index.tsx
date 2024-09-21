@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
-import { indexLoader } from "~/routes/loader";
+import { indexLoader } from "~/loaders";
 import { InfiniteScroll } from "~/components/base/InfinitieScroll";
 import { ImageGrid } from "~/components/ImageGrid";
 

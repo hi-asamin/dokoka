@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { Image } from "~/types/images";
 
 interface Props {
@@ -12,7 +13,9 @@ export const ImageGrid = ({ images }: Props): React.JSX.Element => {
           key={image.id}
           className="w-full rounded overflow-hidden shadow-lg"
         >
-          <img src={image.src} alt={image.alt} className="w-full h-auto" />
+          <Link to={`/spots/${image.id}?image=${image.src}`}>
+            <img src={image.src} alt={image.alt} className="w-full h-auto" />
+          </Link>
         </div>
       ))}
     </div>
