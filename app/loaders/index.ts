@@ -1,4 +1,5 @@
 import { LoaderFunction, LoaderFunctionArgs, json } from "@remix-run/node";
+import i18next from "~/i18n/i18next.server";
 
 export const indexLoader: LoaderFunction = async ({
   request,
@@ -26,5 +27,11 @@ export const indexLoader: LoaderFunction = async ({
   const endCursor = parseInt(offset) + limit; // 次の取得のためのオフセット
   const hasNextPage = data.next !== null; // 次のデータがあるか
 
-  return json({ items, endCursor, hasNextPage });
+  const t = await i18next.getFixedT(request);
+  const metaData = {
+    title: t("meta.title"),
+    description: t("meta.description"),
+  };
+
+  return json({ items, endCursor, hasNextPage, metaData });
 };

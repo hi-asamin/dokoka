@@ -6,13 +6,12 @@ import { indexLoader } from "~/loaders";
 import { InfiniteScroll } from "~/components/base/InfinitieScroll";
 import { ImageGrid } from "~/components/ImageGrid";
 
+import type { IndexPage } from "~/types/indexPage";
 import type { Image } from "~/types/images";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
+export const meta: MetaFunction = ({ data }) => {
+  const metaData = (data as IndexPage).metaData;
+  return [{ title: metaData.title }, { name: metaData.description }];
 };
 
 export const loader = indexLoader;
