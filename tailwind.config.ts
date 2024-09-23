@@ -16,6 +16,13 @@ export default {
           '"Noto Color Emoji"',
         ],
       },
+      colors: {
+        turquoise: "#00CED1",
+        skyblue: "#87CEEB",
+        golden: "#FFD700",
+        navyblue: "#1E3A8A",
+        silver: "#C0C0C0",
+      },
     },
   },
   plugins: [],

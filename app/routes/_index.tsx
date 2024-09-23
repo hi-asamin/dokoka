@@ -5,6 +5,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { indexLoader } from "~/loaders";
 import { InfiniteScroll } from "~/components/base/InfinitieScroll";
 import { ImageGrid } from "~/components/ImageGrid";
+import { FloatingNav } from "~/components/base/FloatingNav";
 
 import type { IndexPage } from "~/types/indexPage";
 import type { Image } from "~/types/images";
@@ -51,6 +52,7 @@ export default function Index() {
       >
         <ImageGrid images={items} />
       </InfiniteScroll>
+      <FloatingNav />
     </>
   );
 }
