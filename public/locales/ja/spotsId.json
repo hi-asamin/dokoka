@@ -1,3 +1,8 @@
 {
-  "name": "場所の名前"
+  "meta": {
+    "title": "Spot ID",
+    "description": "Spot ID"
+  },
+  "name": "場所の名前",
+  "more": "もっと見る"
 }

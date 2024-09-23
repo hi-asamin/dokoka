@@ -1,6 +1,6 @@
 import { FiArrowLeft } from "react-icons/fi";
 
-const BackButton = () => {
+export const BackButton = (): React.ReactElement => {
   return (
     <button
       className="flex items-center justify-center bg-white p-2 rounded-full shadow-md"
@@ -12,5 +12,3 @@ const BackButton = () => {
     </button>
   );
 };
-
-export default BackButton;

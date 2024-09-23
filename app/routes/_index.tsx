@@ -7,11 +7,11 @@ import { InfiniteScroll } from "~/components/base/InfinitieScroll";
 import { ImageGrid } from "~/components/ImageGrid";
 import { FloatingNav } from "~/components/base/FloatingNav";
 
-import type { IndexPage } from "~/types/indexPage";
+import type { IIndexLoader } from "~/types/indexPage";
 import type { Image } from "~/types/images";
 
 export const meta: MetaFunction = ({ data }) => {
-  const metaData = (data as IndexPage).metaData;
+  const metaData = (data as IIndexLoader).metaData;
   return [{ title: metaData.title }, { name: metaData.description }];
 };
 

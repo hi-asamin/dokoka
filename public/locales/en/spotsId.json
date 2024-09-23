@@ -1,3 +1,8 @@
 {
-  "name": "Place Name"
+  "meta": {
+    "title": "Spot ID",
+    "description": "Spot ID"
+  },
+  "name": "Place Name",
+  "more": "More"
 }
