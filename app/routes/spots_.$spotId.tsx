@@ -3,6 +3,7 @@ import type { MetaFunction } from "@remix-run/node";
 
 import { spotsIdLoader } from "~/loaders/spots";
 import { useTranslation } from "react-i18next";
+import { FloatingNav } from "~/components/base/FloatingNav";
 
 export const meta: MetaFunction = () => {
   return [
@@ -35,6 +36,7 @@ export default function Spot() {
         />
       </div>
       <h2>{t("name")}</h2>
+      <FloatingNav />
     </>
   );
 }

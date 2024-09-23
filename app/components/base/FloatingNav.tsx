@@ -16,8 +16,10 @@ export const FloatingNav = (): React.ReactElement => {
     return location.pathname === path;
   };
   const handleClick = (e: React.MouseEvent, path: string): void => {
+    // 現在のページの場合はリンクを無効にする
     if (isActive(path)) {
       e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
   return (
@@ -31,7 +33,7 @@ export const FloatingNav = (): React.ReactElement => {
           onClick={(e) => handleClick(e, indexPath)}
           aria-label="Index"
         >
-          <FaHome />
+          <FaHome size={24} />
         </Link>
         <Link
           to={searchPath}
@@ -41,7 +43,7 @@ export const FloatingNav = (): React.ReactElement => {
           onClick={(e) => handleClick(e, searchPath)}
           aria-label="Search"
         >
-          <FaSearch />
+          <FaSearch size={24} />
         </Link>
         <Link
           to={registerPath}
@@ -51,7 +53,7 @@ export const FloatingNav = (): React.ReactElement => {
           onClick={(e) => handleClick(e, registerPath)}
           aria-label="Register"
         >
-          <FaPlusCircle />
+          <FaPlusCircle size={24} />
         </Link>
         <Link
           to={noticePath}
@@ -61,7 +63,7 @@ export const FloatingNav = (): React.ReactElement => {
           onClick={(e) => handleClick(e, noticePath)}
           aria-label="Notification"
         >
-          <FaBell />
+          <FaBell size={24} />
         </Link>
         <Link
           to={accountPath}
@@ -71,7 +73,7 @@ export const FloatingNav = (): React.ReactElement => {
           onClick={(e) => handleClick(e, accountPath)}
           aria-label="Account"
         >
-          <FaUser />
+          <FaUser size={24} />
         </Link>
       </div>
     </nav>
