@@ -4,6 +4,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { spotsIdLoader } from "~/loaders/spots";
 import { useTranslation } from "react-i18next";
 import { FloatingNav } from "~/components/base/FloatingNav";
+import BackButton from "~/components/base/BackButton";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,6 +24,7 @@ export default function Spot() {
   const { t } = useTranslation("spotsId");
   return (
     <>
+      <BackButton />
       <div className="flex">
         <img
           className="w-full h-auto"
