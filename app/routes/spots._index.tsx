@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => {
 export default function Spots() {
   return (
     <>
-      <div className="flex">製作中です</div>
+      <div className="flex">検索ページ製作中です</div>
     </>
   );
 }

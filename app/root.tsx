@@ -34,7 +34,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { locale } = useLoaderData<typeof loader>();
+  const { locale } = useLoaderData<typeof loader>() || { locale: "en" };
   const { i18n } = useTranslation();
   useChangeLanguage(locale);
   return (
