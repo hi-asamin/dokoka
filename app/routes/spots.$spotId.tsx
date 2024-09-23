@@ -15,7 +15,7 @@ export const handle = { i18n: "spotsId" };
 
 export const loader = spotsIdLoader;
 
-export default function Index() {
+export default function Spot() {
   const { mainImage, noImage } = useLoaderData<typeof loader>();
   const params = useParams();
   const splat = params["*"];
