@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
+import { useGeolocation } from "~/hooks/useGeolocation";
 import { indexLoader } from "~/loaders";
 import { InfiniteScroll } from "~/components/base/InfinitieScroll";
 import { ImageGrid } from "~/components/ImageGrid";
@@ -18,6 +19,15 @@ export const meta: MetaFunction = ({ data }) => {
 export const loader = indexLoader;
 
 export default function Index() {
+  const { location, error: unknownLocation } = useGeolocation();
+
+  if (unknownLocation) {
+    alert(unknownLocation);
+  }
+  if (location) {
+    console.log(location);
+  }
+
   const {
     items: initItems,
     hasNextPage: initHasNextPage,

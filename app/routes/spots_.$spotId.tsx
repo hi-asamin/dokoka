@@ -67,6 +67,7 @@ export default function Spot() {
           }}
         />
       </section>
+
       {/* 2段目: H2とMap Buttonが横並び */}
       <section id="info" className="flex items-center">
         <h2 className="text-2xl font-bold">鶴岡八幡宮</h2>
